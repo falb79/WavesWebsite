@@ -1,0 +1,374 @@
+/*
+Collage of Computer Science and Engineering
+Waves Cruise - Project Course: CCSW321 - Web Development
+
+Project Description:
+This project is a web application for "Waves Cruise," aimed at providing an engaging and user-friendly platform for customers to explore and book cruise services. 
+
+Instructor: Wed Abu Zenadah
+Section: CA2
+Lujain Bajunaid 2216627
+Manal Almalki 2218207
+Fatima Lajam 2216608
+Layan Aljohani 2210459
+Date: 05/11/2024
+*/
+
+:root {
+    --cream: #fffef7;
+    --dark-Blue: #051c4a;
+    --light-blue: #ecf3fa;
+    --orange: #d78d45;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-blue);
+    font-family: "Lora", serif;
+}
+
+/*Nav bar */
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.navbar-nav{
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-item{
+    position: relative;
+}
+
+.nav-item .nav-link{
+    text-decoration: none;
+    color: #EEE2C6;
+    padding-right: 15px;
+    font-family: 'karla';
+
+}
+
+.nav-link:hover{
+    color: #D78D45;
+}
+
+.active .nav-link{
+    font-weight: bold;
+    color: #D78D45;
+}
+
+.nav-item::after {
+    content: '';
+    background-color: #D78D45;
+    height: 3px;
+    width: 40px;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    transition: all 0.3s ease;
+    transform: scaleX(0);
+}
+
+.nav-item.active::after {
+    transform: scaleX(1);
+}
+
+#page-nav{
+    background-image: url("../Media/journey.png");
+    background-size: cover;
+    background-position:center;
+    height: 450px;
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+/*sections*/
+section h1 {
+    text-align: center;
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    color: #d78d45;
+    font-size: 45px;
+}
+
+.button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 5px;
+    background-color: var(--orange);
+    color: #fff;
+    transition: background-color 0.3s ease;
+    text-align: left;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.content {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    border-radius: 11px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.image-container {
+    position: relative;
+    height: 200px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.date-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.514);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content .title {
+    color: #333;
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    font-family: "Lora", serif;
+    font-weight: 700;
+}
+
+.card-content p {
+    color: #555;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-family: 'karla';
+}
+
+.card-content .button {
+
+    padding: 10px 20px;
+}
+
+
+.service-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 25px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.service-item {
+    padding: 20px;
+    text-align: center;
+}
+
+.service-item img {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.service-item h3 {
+    margin: 10px 0;
+}
+
+.service-item p {
+    font-size: 17px;
+    color: #414040;
+    font-family: 'karla';
+}
+
+.reservation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Add red borders in case of errors */
+input.error, select.error, textarea.error {
+    border: 2px solid red; /* Red borders */
+    background-color: #ffe6e6; /* Light background color */
+}
+
+/* Custom error messages */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: none; /* Display only when there is an error */
+    font-family: 'Karla';
+}
+
+/* Success message styling */
+#success-message {
+    color: green;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+}
+.reservation-form {
+    display: flex;
+    flex-wrap: wrap;
+    background: #ffffff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 1000px;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+}
+.form-row-end {
+    width:550px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row label {
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+.required-star {
+    color: var(--orange);
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+.form-row input,
+.form-row select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: var(--orange);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+/*footer*/
+#footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border-top: 1px solid #051C4A;
+    padding: 20px 40px;
+    background-color: var(--light-blue);
+    color: #051C4A;
+    gap: 20px;
+    margin-top: 40px;
+    font-family: 'karla';
+}
+
+#footer div {
+    flex: 1;
+    max-width: 250px;
+    text-align: center;
+}
+
+#Waves-footer img {
+    margin-bottom: 10px;
+}
+
+#footer h4 {
+    color: #D78D45;
+    font-family: "Outfit", sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+#footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#footer li {
+    margin: 14px 0;
+}
+
+#footer li a {
+    color: #051C4A;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+#footer li a:hover {
+    color: #D78D45;
+}
+
+
+@media (max-width: 768px) {
+    .reservation-form {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .form-row {
+        width: 400px
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 5px;
+
+    }
+    .nav-item .nav-link {
+        padding-right: 15px;
+    }
+    
+}

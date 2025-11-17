@@ -1,0 +1,267 @@
+<!-- 
+Collage of Computer Science and Engineering
+Waves Cruise - Project Course: CCSW321 - Web Development
+
+Project Description:
+This project is a web application for "Waves Cruise," aimed at providing an engaging and user-friendly platform for customers to explore and book cruise services. 
+
+Instructor: Wed Abu Zenadah
+Section: CA2
+Lujain Bajunaid 2216627
+Manal Almalki 2218207
+Fatima Lajam 2216608
+Layan Aljohani 2210459
+Date: 05/11/2024
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruise Packages</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/packages.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="page-nav">
+        <header>
+            <a href="index.html"><img src="../Media/waves-cruise.png" width="200" alt="Waves cruise logo"></a>
+            <nav id="navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="packages.html">Packages</a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="About-us.html">About us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact-us.html">Contact us</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <section class="packeges" id="packeges">
+        <h1> Upcoming Adventures</h1>
+        <div class="content">
+            <!--Cruise package 1-->
+            <div class="card">
+                <div class="image-container">
+                    <div class="date-badge" id="package1-date"></div>
+                    <img src="../Media/jed.avif" alt="Beautiful Cruise">
+                </div>
+                <!--Card content-->
+                <div class="card-content">
+                    <p class="title" id="package1-title"></p>
+                    <p id="package1-desc">
+                    </p>
+                    <p id="package1-price"><strong>Price: </strong></p>
+                    <p id="package1-duration"><strong>Duration: </strong></p>
+
+                    <a href="#reservation" class="button">Book Now</a>
+                </div>
+            </div>
+
+            <!--Cruise package 2-->
+            <div class="card">
+                <div class="image-container">
+                    <div class="date-badge" id="package2-date"></div>
+                    <img src="../Media/redsea.jpg" alt="Beautiful Cruise">
+                </div>
+                <!-- Card content-->
+                <div class="card-content">
+                    <p class="title" id="package2-title"></p>
+                    <p id="package2-desc"></p>
+                    <p id="package2-price"><strong>Price: </strong></p>
+                    <p id="package2-duration"><strong>Duration: </strong></p>
+
+                    <a href="#reservation" class="button">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Cruise package 3-->
+            <div class="card">
+                <div class="image-container">
+                    <div class="date-badge" id="package3-date"></div>
+                    <img src="../Media/yacht.jpg" alt="Beautiful Cruise">
+                </div>
+                <!-- Card content-->
+                <div class="card-content">
+                    <p class="title" id="package3-title"></p>
+                    <p id="package3-desc"></p>
+                    <p id="package3-price"><strong>Price: </strong></p>
+                    <p id="package3-duration"><strong>Duration: </strong></p>
+
+                    <a href="#reservation" class="button">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <h1>Whats Included In your Journey</h1>
+        <div class="service-grid">
+            <div class="service-item">
+                <img src="../Media/plant.png" alt="Spa Service Icon">
+                <h3>Spa & Wellness</h3>
+                <p>Relax and rejuvenate with our full-service spa treatments, designed to pamper and refresh.</p>
+            </div>
+            <div class="service-item">
+                <img src="../Media/dinner.png" alt="Dining Service Icon">
+                <h3>Gourmet Dining</h3>
+                <p>Enjoy world-class cuisine prepared by renowned chefs with a variety of dining options onboard.</p>
+            </div>
+            <div class="service-item">
+                <img src="../Media/swimming.png" alt="Pool Service Icon">
+                <h3>Swimming Pools</h3>
+                <p>Take a dip in our luxurious pools, complete with sun loungers and poolside service.</p>
+            </div>
+            <div class="service-item">
+                <img src="../Media/balloons.png" alt="Entertainment Service Icon">
+                <h3>Live Entertainment</h3>
+                <p>Experience captivating performances and shows by talented artists every night.</p>
+            </div>
+            <div class="service-item">
+                <img src="../Media/gym.png" alt="Fitness Center Icon">
+                <h3>Fitness Center</h3>
+                <p>Stay active in our state-of-the-art fitness center with classes and modern equipment.</p>
+            </div>
+            <div class="service-item">
+                <img src="../Media/slide.png" alt="Kids Club Icon">
+                <h3>Kids Club</h3>
+                <p>Our Kids Club offers engaging activities for children of all ages, allowing you to relax.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="reservation" id="reservation">
+        <h1>Reserve Now</h1>
+
+        <form id="reservationForm" class="reservation-form" action="/submit" method="post">
+            <div class="form-row">
+                <label for="name">First and Last Name: <span class="required-star">*</span></label>
+                <input type="text" id="name" name="name" placeholder="your name" required>
+                <span class="error-message" style="display: none;"></span> <!-- Error message -->
+            </div>
+
+            <div class="form-row">
+                <label for="email">Email:<span class="required-star">*</span></label>
+                <input type="email" id="email" name="email" placeholder="name@domain.com" required
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                <span class="error-message" style="display: none;"></span><!-- Error message -->
+            </div>
+
+            <div class="form-row">
+                <label for="phone">Phone Number:<span class="required-star">*</span></label>
+                <input type="tel" id="phone" name="phone" required pattern="966\d{9}" placeholder="966XXXXXXXXX"
+                    maxlength="13">
+                <span class="error-message" style="display: none; color: red; font-size: 0.9em;">Phone number must
+                    follow the format 9665XXXXXXXX</span> <!-- Error message -->
+            </div>
+
+            <div class="form-row">
+                <label for="adults">Number of people(max 10):<span class="required-star">*</span></label>
+                <input type="number" id="adults" name="adults" required min="1" max="10" title=" Phone number must be in
+                    the format +9665XXXXXXXX or 9665XXXXXXXX.">
+                <span class="error-message" style="display: none;"></span> <!-- Error message -->
+            </div>
+
+            <div class="form-row">
+                <label for="package">Select Package:<span class="required-star">*</span></label>
+                <select id="package" name="package" onchange="setDates()" required>
+                    <option value="">Choose a package</option>
+                    <option value="package1">Jeddah-Jordan</option>
+                    <option value="package2">Redsea Island</option>
+                    <option value="package3">Jeddah-Yanbu-Tabuk</option>
+                </select>
+                <span class="error-message" style="display: none;"></span> <!-- Error message -->
+            </div>
+
+            <div class="form-row">
+                <label for="departure">Departure Date: <span class="required-star">*</span></label>
+                <input type="date" id="departure" name="departure" required readonly>
+                <span class="error-message" style="display: none;"></span> <!-- Error message -->
+            </div>
+
+            <div class="form-row">
+                <label for="return">Return Date: <span class="required-star">*</span></label>
+                <input type="date" id="return" name="return" required readonly>
+                <span class="error-message" style="display: none;"></span> <!-- Error message -->
+            </div>
+
+            <div class="form-row">
+                <label for="total">Total Payment:</label>
+                <input type="text" id="total" name="total" readonly>
+                <span class="error-message" style="display: none;"></span> <!-- Error message -->
+            </div>
+
+            <div class="form-row-end">
+                <button type="submit">Send Reservation</button>
+
+                <div id="success-message" style="display: none; color: green; font-weight: bold;">
+                    Your reservation was successfully submitted!
+                </div>
+
+            </div>
+        </form>
+    </section>
+    <footer id="footer">
+
+        <div id="Waves-footer">
+            <img src="../Media/waves-cruise.png" width="250" alt=" waves logo">
+            <p>Designed and brought to you by our<br>development team.<br>
+                &copy; WAVES Cruise 2024</p>
+        </div>
+
+        <div id="footer1">
+            <ul>
+                <li>
+                    <h4>Categories</h4>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="About-us.html">About us</a></li>
+                <li><a href="Contact-us.html">Contact us</a></li>
+            </ul>
+        </div>
+
+        <div id="footer2">
+            <ul>
+                <li>
+                    <h4>About us</h4>
+                </li>
+                <li><a href="About-us.html#vision">Our Vision</a></li>
+                <li><a href="About-us.html#mission">Our Mission</a></li>
+                <li><a href="About-us.html#developers">About us</a></li>
+            </ul>
+        </div>
+
+        <div id="footer3">
+            <ul>
+                <li>
+                    <h4>Contact</h4>
+                </li>
+                <li><a href="Contact-us.html">Contact us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="../JS/get-packages-script.js"></script>
+    <script src="../JS/reservations-script.js"></script>
+
+</body>
+
+</html>

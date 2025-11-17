@@ -1,0 +1,187 @@
+<!-- 
+Collage of Computer Science and Engineering
+Waves Cruise - Project Course: CCSW321 - Web Development
+
+Project Description:
+This project is a web application for "Waves Cruise," aimed at providing an engaging and user-friendly platform for customers to explore and book cruise services. 
+
+Instructor: Wed Abu Zenadah
+Section: CA2
+Lujain Bajunaid 2216627
+Manal Almalki 2218207
+Fatima Lajam 2216608
+Layan Aljohani 2210459
+Date: 05/11/2024
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waves Cruise</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/home.css">
+</head>
+
+<body>
+    <div id="page-nav">
+        <header>
+            <a href="#"><img src="../Media/waves-cruise.png" width="200" alt="Waves cruise logo"></a>
+            <nav id="navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="packages.html">Packages</a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="About-us.html">About us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact-us.html">Contact us</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="intro">
+            <div class="intro-content">
+                <h2>Welcome to Waves Cruise</h2>
+                <p>Explore the vibrant coastlines and stunning destinations of Saudi Arabia with our exclusive luxury
+                    cruise services.</p>
+                    <button class="cta-button" onclick="window.location.href='#why-choose'">Discover More</button>
+            </div>
+        </div>
+    </div>
+    <main>
+
+
+        <section id="why-choose" class="why-choose">
+            <h2>Why You Should Try Our Cruise</h2>
+            <p>Experience the charm of the Red Sea and Saudi Arabia's most treasured destinations on an unforgettable
+                journey with Waves Cruise. With world-class amenities, luxurious suites, fine dining, and personalized
+                excursions, every detail is crafted to provide an extraordinary experience.</p>
+        </section>
+
+        <section id="destinations" class="destinations">
+            <h2>Explore Our Destinations</h2>
+            <div class="destination-gallery">
+                <div class="destination">
+                    <img src="../Media/Al-Balad_Jeddah_Saudi_Arabia.jpg" alt="Yanbu coastline">
+                    <h3>Yanbu</h3>
+                    <p>Yanbu is a beautiful coastal city known for its stunning beaches and crystal-clear waters. It’s a
+                        perfect destination for snorkeling, diving, and enjoying a variety of water sports, making it a
+                        paradise for adventure seekers.</p>
+                </div>
+                <div class="destination">
+                    <img src="../Media/Amlaj.jpg" alt="Amlaj beach view">
+                    <h3>Amlaj</h3>
+                    <p>Amlaj is famous for its white sandy beaches and tranquil turquoise waters. This charming town is
+                        a great spot for relaxation, sunbathing, and exploring the nearby coral reefs, offering a serene
+                        escape from the hustle and bustle.</p>
+                </div>
+                <div class="destination">
+                    <img src="../Media/Tabak.jpg" alt="Tabuk landscape">
+                    <h3>Tabuk</h3>
+                    <p>Tabuk is known for its rich history and stunning landscapes. Explore ancient ruins, enjoy outdoor
+                        adventures in the mountains, and discover the beautiful natural parks that surround this
+                        captivating city.</p>
+                </div>
+                <div class="destination">
+                    <img src="../Media/Jeddah.jpg" alt="Jeddah Corniche">
+                    <h3>Jeddah</h3>
+                    <p>Jeddah is a vibrant city with a rich cultural heritage and beautiful waterfront. Enjoy the famous
+                        Jeddah Corniche, visit historic sites, and indulge in diverse dining options along the stunning
+                        Red Sea coast.</p>
+                </div>
+                <div class="destination">
+                    <img src="../Media/NEOM_vision.jpg" alt="Neom futuristic cityscape">
+                    <h3>Neom</h3>
+                    <p>Neom is an ambitious project aimed at creating a sustainable city of the future. Located along
+                        the Red Sea, it promises innovative living, cutting-edge technology, and breathtaking
+                        landscapes, setting new standards for urban living.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-section">
+            <h2>Experience Waves Cruise</h2>
+            <video controls class="video-full-width">
+                <source src="../Media/cruise_intro.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <div class="service-table">
+                <div class="service">
+                    <h3>Luxury Suites</h3>
+                    <p>Enjoy the ultimate comfort with our spacious, beautifully designed suites.</p>
+                </div>
+                <div class="service">
+                    <h3>Fine Dining</h3>
+                    <p>Savor gourmet meals crafted by world-renowned chefs.</p>
+                </div>
+                <div class="service">
+                    <h3>Entertainment</h3>
+                    <p>Live shows, movie nights, and various activities to keep you entertained.</p>
+                </div>
+                <div class="service">
+                    <h3>Excursions</h3>
+                    <p>Guided tours to Saudi Arabia’s must-see destinations.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-section" id="waves-footer">
+            <img src="../Media/waves-cruise.png" width="250" alt="">
+            <p>Designed and brought to you by our<br>development team.<br>&copy; WAVES Cruise 2024</p>
+        </div>
+
+        <div class="footer-section" id="footer-categories">
+            <ul>
+                <li>
+                    <h4>Categories</h4>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="About-us.html">About us</a></li>
+                <li><a href="Contact-us.html">Contact us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section" id="footer-about">
+            <ul>
+                <li>
+                    <h4>About us</h4>
+                </li>
+                <li><a href="About-us.html#vision">Our Vision</a></li>
+                <li><a href="About-us.html#mission">Our Mission</a></li>
+                <li><a href="About-us.html#developers">About us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section" id="footer-contact">
+            <ul>
+                <li>
+                    <h4>Contact</h4>
+                </li>
+                <li><a href="Contact-us.html">Contact us</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
